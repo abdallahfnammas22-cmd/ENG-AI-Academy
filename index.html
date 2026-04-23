@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ملتقى توظيف الذكاء الاصطناعي في تعليم الإنجليزية</title>
+  <meta name="description" content="منصة تفاعلية لتوظيف الذكاء الاصطناعي في تعليم اللغة الإنجليزية للطلبة العرب والمعلمين." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#top">
+        <span class="brand-logo"><img src="assets/moe-logo.jpg" alt="شعار وزارة التربية والتعليم الأردنية" /></span>
+        <span class="brand-copy">
+          <small>وزارة التربية والتعليم</small>
+          <strong>ENG-AI</strong>
+          <em>تعلم الإنجليزية بالذكاء الاصطناعي</em>
+        </span>
+      </a>
+
+      <div class="sidebar-search">
+        <input id="navSearch" type="search" placeholder="ابحث عن سؤال أو ورقة عمل..." />
+      </div>
+
+      <nav class="sidebar-nav" id="mainNav">
+        <a href="#top" class="active">الرئيسية</a>
+        <a href="#assistant">المساعد الذكي</a>
+        <a href="#question-bank">بنك الأسئلة</a>
+        <a href="#worksheets">أوراق العمل</a>
+        <a href="#lab">المختبر</a>
+        <a href="#contact">التواصل</a>
+      </nav>
+
+      <div class="sidebar-card">
+        <h3>كيف يعمل؟</h3>
+        <ul>
+          <li>يحدد الطالب نوع المهارة أولًا.</li>
+          <li>يختار أسلوب الإجابة المناسب.</li>
+          <li>يحصل على تدريب سريع أو شرح أو سؤال متابعة.</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-card ideas-card">
+        <h3>أفكار جاهزة</h3>
+        <div class="idea-tags">
+          <button type="button" data-prompt="speaking about hobbies">speaking about hobbies</button>
+          <button type="button" data-prompt="correct my paragraph">correct my paragraph</button>
+          <button type="button" data-prompt="daily routine">daily routine</button>
+          <button type="button" data-prompt="present simple">present simple</button>
+        </div>
+      </div>
+    </aside>
+
+    <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="فتح القائمة">☰</button>
+
+    <main class="main-content" id="top">
+      <section class="hero">
+        <div class="hero-content reveal">
+          <span class="hero-pill">منصة مدرسية تفاعلية</span>
+          <h1>تم تحديث الموقع مع <span>الشعار الجديد</span> وتحسين الأزرار والتفاعل بالكامل</h1>
+          <p>
+            هذه النسخة أقرب لأسلوب المواقع الحديثة التي أرسلتها: واجهة جانبية، أقسام واضحة، مساعد ذكي تفاعلي،
+            وبحث سريع يساعد الطالب على الوصول إلى السؤال أو ورقة العمل أو المهارة المناسبة فورًا.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#assistant">ابدأ مع المساعد الذكي</a>
+            <a class="btn btn-secondary" href="#question-bank">استعرض بنك الأسئلة</a>
+          </div>
+          <div class="hero-stats">
+            <article><strong>4</strong><span>فئات رئيسية</span></article>
+            <article><strong>80</strong><span>سؤالًا تدريبيًا</span></article>
+            <article><strong>10</strong><span>أوراق عمل</span></article>
+          </div>
+        </div>
+        <div class="hero-panel reveal delay-1">
+          <img src="assets/moe-logo.jpg" alt="شعار الوزارة" class="hero-logo" />
+          <div class="hero-panel-copy">
+            <h2>ملتقى توظيف أدوات الذكاء الاصطناعي</h2>
+            <p>في تعليم اللغة الإنجليزية</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="assistant-section reveal" id="assistant">
+        <div class="section-heading">
+          <span class="section-kicker">المساعد الذكي التفاعلي</span>
+          <h2>واجهة أجمل وإجابات تتغير حسب نوع السؤال</h2>
+          <p>اختر نوع الطلب، ثم اكتب سؤالك، وسيعطيك الموقع ردًا مناسبًا: شرح، تصحيح، أسئلة تدريبية، أو خطوات كتابة.</p>
+        </div>
+
+        <div class="assistant-grid">
+          <div class="assistant-chat card-dark">
+            <div class="assistant-toolbar">
+              <button class="btn action-btn" id="generateAnswer" type="button">توليد الإجابة</button>
+              <input id="assistantInput" type="text" placeholder="اكتب سؤالك هنا..." />
+              <select id="assistantMode">
+                <option value="arabic_explain">اشرح بالعربي</option>
+                <option value="correct">صحح كتابتي</option>
+                <option value="questions">اعطني أسئلة تدريب</option>
+                <option value="paragraph">اكتب فقرة قصيرة</option>
+                <option value="speaking">ساعدني في المحادثة</option>
+              </select>
+            </div>
+
+            <div class="assistant-suggestions" id="assistantSuggestions">
+              <button type="button" data-suggest="Explain present simple in Arabic.">Explain present simple in Arabic.</button>
+              <button type="button" data-suggest="Give me 5 speaking questions about school.">Give me 5 speaking questions about school.</button>
+              <button type="button" data-suggest="Correct: She go to school every day.">Correct: She go to school every day.</button>
+              <button type="button" data-suggest="Help me write a short paragraph about my family.">Help me write a short paragraph about my family.</button>
+            </div>
+
+            <div class="chat-window" id="chatWindow">
+              <div class="message bot">
+                <div class="bubble">
+                  أهلاً بك. اختر نوع السؤال من الأعلى، ثم اكتب طلبك. سأعطيك إجابة مناسبة للمستوى المدرسي.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="assistant-side">
+            <div class="card-dark side-mini">
+              <h3>تدريب سريع</h3>
+              <ol>
+                <li>Complete: She ___ to school every day.</li>
+                <li>Write one sentence about your hobby.</li>
+                <li>Ask a question using Do.</li>
+              </ol>
+              <p>بعد أن تجيب، قارن إجابتك مع قاعدة الدرس.</p>
+            </div>
+            <div class="card-dark side-mini">
+              <h3>أنماط الإجابة</h3>
+              <div class="mode-list">
+                <span>شرح مبسط</span>
+                <span>تصحيح مباشر</span>
+                <span>أسئلة متابعة</span>
+                <span>فقرة نموذجية</span>
+                <span>محادثة قصيرة</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="question-bank">
+        <div class="section-heading">
+          <span class="section-kicker">بنك الأسئلة</span>
+          <h2>أربع فئات منظمة مع بحث سريع</h2>
+          <p>يمكنك الآن البحث من الشريط الجانبي أو من هذا القسم. تم تحسين شكل الأزرار وبطاقات الأسئلة لتكون أوضح وأسهل.</p>
+        </div>
+
+        <div class="search-row">
+          <input id="siteSearch" type="search" placeholder="ابحث عن سؤال أو مهارة أو كلمة..." />
+          <button class="btn btn-primary" id="clearSearch" type="button">مسح</button>
+        </div>
+        <div class="filter-row" id="filters">
+          <button class="filter-btn active" type="button" data-filter="all">الكل</button>
+          <button class="filter-btn" type="button" data-filter="vocabulary">المفردات</button>
+          <button class="filter-btn" type="button" data-filter="grammar">القواعد</button>
+          <button class="filter-btn" type="button" data-filter="reading">القراءة</button>
+          <button class="filter-btn" type="button" data-filter="writing">الكتابة والمحادثة</button>
+        </div>
+        <p class="search-status" id="searchStatus">اكتب كلمة للبحث داخل الأسئلة وأوراق العمل.</p>
+        <div class="category-grid" id="questionCategories"></div>
+      </section>
+
+      <section class="section reveal" id="worksheets">
+        <div class="section-heading">
+          <span class="section-kicker">أوراق العمل</span>
+          <h2>10 نماذج جاهزة بشكل أفضل</h2>
+          <p>تم تنسيق البطاقات والأزرار بشكل أوضح لتبدو أقرب للمواقع الاحترافية الحديثة.</p>
+        </div>
+        <div class="worksheet-grid" id="worksheetGrid"></div>
+      </section>
+
+      <section class="section reveal" id="lab">
+        <div class="section-heading">
+          <span class="section-kicker">المختبر</span>
+          <h2>تفاعل سريع للمفردات والقواعد</h2>
+        </div>
+        <div class="interactive-grid">
+          <article class="card">
+            <h3>بطاقات مفردات</h3>
+            <div class="flashcards" id="flashcards"></div>
+          </article>
+          <article class="card">
+            <h3>تبويبات تعليمية</h3>
+            <div class="tabs">
+              <div class="tab-buttons">
+                <button class="tab-btn active" type="button" data-tab="grammarTab">القواعد</button>
+                <button class="tab-btn" type="button" data-tab="speakingTab">المحادثة</button>
+                <button class="tab-btn" type="button" data-tab="writingTab">الكتابة</button>
+              </div>
+              <div class="tab-panel active" id="grammarTab">
+                <p><strong>Present Simple:</strong> I study English every day.</p>
+                <p><strong>Present Continuous:</strong> I am studying English now.</p>
+              </div>
+              <div class="tab-panel" id="speakingTab">
+                <ul class="simple-list">
+                  <li>Introduce yourself in 5 sentences.</li>
+                  <li>Talk about your school day.</li>
+                  <li>Ask your friend about hobbies.</li>
+                </ul>
+              </div>
+              <div class="tab-panel" id="writingTab">
+                <p>Write 6 sentences about how technology helps you learn English.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="contact">
+        <div class="section-heading">
+          <span class="section-kicker">التواصل</span>
+          <h2>نسخة جاهزة للتبديل على الموقع الحالي</h2>
+          <p>يمكنك رفع الملفات الجديدة مباشرة بدل النسخة الموجودة في الرابط الحالي، مع الحفاظ على نفس اسم الصفحة الرئيسية.</p>
+        </div>
+        <div class="contact-box card">
+          <p><strong>مهم:</strong> تم وضع الشعار الجديد داخل الموقع، وتحسين الأزرار والواجهة التفاعلية، وإصلاح عناصر البحث والتنقل.</p>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <p>إعداد: فريد سعيد نماس — إشراف: حسن بني يونس — بالتعاون مع علي بني يونس</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
